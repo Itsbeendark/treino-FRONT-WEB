@@ -1,34 +1,40 @@
 /* Lembrete mental: ":root" nao possui um local especifico, contudo e importante pra se acostumar entender de onde ele vai ser requisitado e aloca-lo antes ou depois */
 :root {
     --green: #00FF00;
-    --white: #ffffff;
+    --white: #FFFFFF;
     --black: #000000;
 }
 
 body {
     font-family: monospace;
+    background: var(--bg);
+    color: var(--fontColor);
 }
 
 ul {
     font-family: Helvetica;
-
-    li {
-        list-style: circle;
-    }
-
-    .list {
-        list-style: square;
-    }
 }
 
-.light-theme {
-    --bg: var(--green);
-    --fontColor: var(--black);
+ul li {
+    list-style: circle;
+}
+
+ul .list {
+    list-style: square;
 }
 
 .dark-theme {
     --bg: var(--black);
     --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
 }
 
 .btn {
@@ -43,6 +49,4 @@ ul {
     background-color: var(--btnBg);
 }
 
-body {
-    background: var(--bg);
-}
+.btn:focus { outline-style: none;}
